@@ -22,19 +22,18 @@ header > img {
 }
 
 .btnMenu {
-    display: block;
+    display: flex;
     box-sizing: border-box;
     position: fixed;
     right: 0px;
     top: 0px;
-    text-align: center;
     width: 38px;
     height: 38px;
     background-color: white;
-    color: #462663!important;
+    color: #462663;
     font-size: 30px;
-    line-height: 36px; /* evita bug no mobile */
-    border: 1px solid black;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.8);
 }
 
     /* principal */
