@@ -33,6 +33,7 @@ header > img {
     background-color: white;
     color: #462663!important;
     font-size: 30px;
+    line-height: 30px; /* evita bug no mobile */
     border: 1px solid black;
 }
 
@@ -83,14 +84,19 @@ aside {
 }
 
 aside h2 {
+    text-align: center;
     color: #999999;
     font-size: 18px;
     line-height: normal;
 }
 
-form span{
+form label {
     font-size: 12px;
-    color: #bbbbbb;
+    color: #7a7676;
+}
+
+form .red{
+    color: rgb(255, 8, 8);
 }
 
 .campo {   
@@ -105,7 +111,7 @@ form span{
 
 #btnSub {
     transform: translateX(-50%); /* referencia de canto x passa a ser a metade */
-    margin: 0 50%;
+    margin: 10px 50%;
     width: 280px;
     height: 56px;
     color: white;
@@ -116,7 +122,7 @@ form span{
     cursor: pointer;
 }
 
-form input[type=submit]:hover {
+form input#btnSub[type=submit]:hover {
     background-color: #323665;
     outline: 0;
 }
