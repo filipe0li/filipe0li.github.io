@@ -1,0 +1,228 @@
+@font-face {
+    font-family: "Gloria Hallelujah";
+    src: url(../font/GloriaHallelujah-Regular.ttf);
+}
+* {
+    font-family: "Gloria Hallelujah", cursive;
+    text-decoration: none;
+}
+
+    /* header */
+
+header {
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    background-color: #212343;
+}
+
+header > img {
+    padding: 20px;
+    height: 20px;
+}
+
+.btnMenu {
+    box-sizing: border-box;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    display: block;
+    padding: 1px 5px;
+    width: 38px;
+    height: 38px;
+    background-color: white;
+    color: #462663!important;
+    font-size: 30px;
+    border: 1px solid black;
+}
+
+    /* principal */
+
+.principal {
+    box-sizing: border-box;
+    width: 100%;
+    height: 557px;
+    background-image: url('../images/header_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 100px 10px;
+}
+
+.central {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(33, 35, 67, 0.7);
+    color: white;
+}
+.central > ul > li {
+    list-style-position: inside;
+    padding: 15px 0;
+}
+
+    /* aside */
+
+aside {
+    z-index: 1; /* passa item para frente no eixo  Z */
+    box-sizing: border-box;
+    position: fixed;
+    right: calc(50% - (400px / 2)); /* gambiarra */
+    top: calc(50% - (585px / 2));   /* gambiarra */
+    padding: 0px 15px 15px 15px;
+    width: 400px;
+    height: 585px;
+    background-color: white;
+    border: 12px solid rgba(120, 120, 120, 0.5);
+    background-clip: padding-box; /* Nenhum fundo é desenhado abaixo da borda */
+    transition: right 300ms linear;
+}
+
+.close {
+    right: -400px;
+}
+
+aside h2 {
+    color: #999999;
+    font-size: 18px;
+    line-height: normal;
+}
+
+form span{
+    font-size: 12px;
+    color: #bbbbbb;
+}
+
+.campo {   
+    margin: 5px 0 20px 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 55px;
+    border:  1px solid #cccccc;
+    padding: 8px 10px 8px 10px;
+    outline: 0; /* remove borda ao se clicado */
+}
+
+#btnSub {
+    transform: translateX(-50%); /* referencia de canto x passa a ser a metade */
+    margin: 0 50%;
+    width: 280px;
+    height: 56px;
+    color: white;
+    font-size: 25px;
+    border-bottom: 5px solid #4a5097;
+    background-color: #363a6d;
+    border: 0;
+    cursor: pointer;
+}
+
+form input[type=submit]:hover {
+    background-color: #323665;
+    outline: 0;
+}
+
+    /* section primeira*/
+
+.primeira {
+    text-align: center;
+    padding: 40px;
+    background-color: #dddddd;;
+}
+
+.primeira h2 {
+    font-weight: normal;
+}
+
+.primeira p {
+    margin: 30px auto;
+    text-align: justify;
+    line-height: normal;
+}
+
+    /* arrow */
+
+.arrow {
+    position: relative;
+    top: -20px;
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/arrow.png);
+    background-size: 100%;
+}
+
+    /* section segunda*/
+
+.segunda {
+    text-align: center;
+}
+
+.segunda h2 {
+    font-weight: normal;
+    color: #462663;
+}
+
+.segunda img {
+    padding: 20px;
+}
+
+.segunda p {
+    text-align: justify;
+}
+
+.wrap {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+    /* footer */
+
+footer {
+    border-top: 2px solid #888888;
+    padding: 60px 0;
+    text-align: center;
+    color: #888888;
+}
+
+    /* respinsivo */
+
+@media screen and (min-width: 768px) {
+
+        /* header */
+    header {
+        text-align: left;
+    }
+
+        /* main */
+
+    .central {
+        max-width: 800px;
+    }
+        /* aside */
+
+    aside {
+        top: 45px;
+        right: 0;
+    }
+        /* section primeira */
+
+    .primeira p {
+        max-width: 1000px;
+    }
+
+        /* section segunda */
+
+    .segunda {
+        display: flex; /* Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens. */
+        flex-wrap: wrap; /* assim quando um dos flex itens atinge o limite do conteúdo, o último item passa para a coluna debaixo e assim por diante. */
+        justify-content: center; /* A propriedade só funciona se os itens atuais não ocuparem todo o container */
+    }
+
+    .segunda h2 {
+        width: 100%; /* Para que o h2 ocupe 100% da linha e passe o conteúdo para baixo */
+    }
+
+    .wrap {
+        max-width: calc((1000px  / 3) + 20px); /* 1000px tamanho maximo; / 3 são 3 div; + 20px do padding */
+    }
+}
